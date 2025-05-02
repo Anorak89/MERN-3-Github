@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { add } from "../actions/jokeActions";
+import { addDBJokes } from "../reducers/jokeReducer";
 
 const JokeForm = () => {
   const dispatch = useDispatch();
@@ -7,7 +8,12 @@ const JokeForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Joke Submitted :", event.target.joke.value);
-    dispatch(add(event.target.joke.value));
+    const addedJoke = ({
+      joke: event.target.joke.value,
+      vote: 0,
+      favorite: false,
+    });
+    dispatch(addDBJokes(addedJoke));
     event.target.joke.value = "";
   };
 
