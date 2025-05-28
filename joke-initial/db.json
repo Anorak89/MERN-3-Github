@@ -10,19 +10,19 @@
       "id": "2",
       "joke": "How many programmers does it take to change a light bulb? None, that's a hardware issue.",
       "vote": 8,
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "4",
       "joke": "There are only 10 types of people in the world: those who understand binary and those who don’t.",
       "vote": 7,
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "c116",
       "joke": "asdfasdfadsf",
-      "vote": 0,
-      "favorite": false
+      "vote": 2,
+      "favorite": true
     }
   ]
 }
