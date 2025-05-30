@@ -80,7 +80,16 @@ const App = () => {
     <Router>
       <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <Routes>
-        <Route path="/" element={<BlogList blogs = {blogs}/>} /> 
+        <Route
+          path="/"
+          element={
+            isLoggedIn ? (
+              <BlogList blogs={blogs} />
+            ) : (
+              <Login setIsLoggedIn={setIsLoggedIn} />
+            )
+          }
+        />
         <Route path="/users" element={<UserList users = {users}/>} /> 
         <Route path="/about" element={<About />} /> 
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
